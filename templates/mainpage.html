@@ -25,12 +25,14 @@
 				</div>
 
 				<div class="social-media-icons">
-					<a href="https://vk.com/id838686053"
-						><img src="/static/vk.png" class="vk-icon"
-					/></a>
-					<a href=""
-						><img src="/static/telegram.png" class="telegram-icon"
-					/></a>
+					<a href="https://vk.com/id838686053">
+						<!-- <img src="/static/vk.png" class="vk-icon" /> -->
+						<img src="{{url_for('static', filename='vk.png')}}" />
+					</a>
+					<a href="">
+						<!-- <img src="/static/telegram.png" class="telegram-icon" /> -->
+						<img src="{{url_for('static', filename='telegram.png')}}" />
+					</a>
 				</div>
 			</nav>
 		</header>
@@ -93,9 +95,15 @@
 				</div>
 
 				<div class="imgs">
-					<img src="photo/woman.png" class="author_img" alt="" />
+					<!-- <img src="photo/woman.png" class="author_img" alt="" /> -->
+					<img
+						class="author_img"
+						src="{{ url_for('static', filename='woman.png') }}" />
 					<!--img class="author_img" src="{{ url_for('static', filename='woman.png') }}" /!-->
-					<img src="photo/numbers.png" class="numbers_img" alt="" />
+					<!-- <img src="photo/numbers.png" class="numbers_img" alt="" /> -->
+					<img
+						class="numbers_img"
+						src="{{ url_for('static', filename='numbers.png') }}" />
 					<!--img class="numbers_img" src="{{ url_for('static', filename='numbers.png') }}" /!-->
 				</div>
 			</div>

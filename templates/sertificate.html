@@ -27,12 +27,14 @@
 				</div>
 
 				<div class="social-media-icons">
-					<a href="https://vk.com/id838686053"
-						><img src="/static/vk.png" class="vk-icon"
-					/></a>
-					<a href=""
-						><img src="/static/telegram.png" class="telegram-icon"
-					/></a>
+					<a href="https://vk.com/id838686053">
+						<!-- <img src="/static/vk.png" class="vk-icon" /> -->
+						<img src="{{url_for('static', filename='vk.png')}}" />
+					</a>
+					<a href="">
+						<!-- <img src="/static/telegram.png" class="telegram-icon" /> -->
+						<img src="{{url_for('static', filename='telegram.png')}}" />
+					</a>
 				</div>
 			</nav>
 		</header>
@@ -57,10 +59,14 @@
 					</div>
 				</div>
 				<div class="container_photo">
-					<img src="photo/sertificate1.png" class="photo1" />
-					<!--img src="photo/sertificate1.png"!-->
-					<img src="photo/sertificate2.jpg" class="photo2" />
-					<!--img src="photo/sertificate2.jpg"!-->
+					<!-- <img src="photo/sertificate1.png" class="photo1" /> -->
+					<img
+						src="{{ url_for('static', filename='sertificate1.png') }}"
+						class="photo1" />
+					<!-- <img src="photo/sertificate2.jpg" class="photo2" /> -->
+					<img
+						class="photo2"
+						src="{{ url_for('static', filename='sertificate2.jpg') }}" />
 				</div>
 			</div>
 		</div>
